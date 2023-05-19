@@ -53,6 +53,7 @@ String blabla = "";
 ## Types
 
 In most programming languages:
+
 1. Object (umbrella, everything is an object);
 2. String (text, made up of characters, or a list of characters);
 3. Char (character);
