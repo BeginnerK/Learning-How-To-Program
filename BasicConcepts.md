@@ -1,12 +1,46 @@
 # Basic Concepts
 
-- bits/bytes
-- variables
-- types
-- if else
-- loops
-- functions/methods
-- arrays
+- Bits/Bytes: Understanding the basic unit of information storage and manipulation in a computer system.
+- Variables: Named storage locations used to hold values that can be modified during program execution.
+- Data Types: The different kinds of data that can be stored in variables, such as numbers, characters, booleans, etc.
+- Conditional Statements:
+   * If-else: Allows the program to make decisions based on a condition.
+   * Switch: Provides multiple branches of execution based on different values of a variable.
+- Loops:
+    * While: Repeatedly executes a block of code while a condition is true.
+   * For: Repeats a block of code a specific number of times.
+   * Do-while: Executes a block of code at least once, then repeatedly executes it while a condition is true.
+- Operators
+    * Arithmetic Operators:
+       - Addition (+)
+       - Subtraction (-)
+       - Multiplication (*)
+       - Division (/)
+        - Modulo (Remainder) (%)
+
+    * Assignment Operators:
+        - Assignment (=)
+        - Compound assignment operators (e.g., +=, -=, *=, /=)
+
+    * Comparison Operators:
+       - Equal to (==)
+       - Not equal to (!=)
+       - Greater than (>)
+       - Less than (<)
+       - Greater than or equal to (>=)
+       - Less than or equal to (<=)
+
+    * Logical Operators:
+       - Logical AND (&&)
+       - Logical OR (||)
+       - Logical NOT (!)
+
+    * Increment/Decrement Operators:
+       - Increment (++)
+       - Decrement (--)
+- Functions/Methods: Blocks of reusable code that perform specific tasks and can be called from different parts of the program.
+- Arrays/Lists: Data structures that allow storing multiple values in a single variable, enabling efficient storage and retrieval of data.
+- Advanced structures: Dictionaries, Sets, ...
 
 ## Bits / bytes
 
