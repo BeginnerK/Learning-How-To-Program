@@ -76,7 +76,7 @@ An if-else block (always together), is something that happens conditionally.
 ```ruby
 if (condition) then
     ...
-else 
+else
     ...
 end
 ```
@@ -91,7 +91,7 @@ you = "happy";
 ## only if else
 # if (you == "happy") then
 #     smile()
-# else 
+# else
 #     cry()
 # end
 
@@ -154,38 +154,34 @@ end
 #### Javascript
 
 ```javascript
-if (you == "happy"){
-    smile()
-}
-else if (you == "angry" && you == "hungry") {
-    frown()
-    eat()
-}
-else if (you == "hungry") {
-    eat()
-}
-else if (you == "angry"){
-    frown()
-}
-else {
-    cry()
-    punchWall()
+if (you == "happy") {
+  smile();
+} else if (you == "angry" && you == "hungry") {
+  frown();
+  eat();
+} else if (you == "hungry") {
+  eat();
+} else if (you == "angry") {
+  frown();
+} else {
+  cry();
+  punchWall();
 }
 
 switch (you) {
-    case "happy":
-        smile();
-        break;
-    case "angry":
-        frown();
-        break;
-    case "hungry":
-        eat();
-        break;
-    default:
-        cry();
-        punchWall();
-        break;
+  case "happy":
+    smile();
+    break;
+  case "angry":
+    frown();
+    break;
+  case "hungry":
+    eat();
+    break;
+  default:
+    cry();
+    punchWall();
+    break;
 }
 ```
 
@@ -327,19 +323,87 @@ Exactly the same as a while, except it happens at least once.
 #### do while Syntax
 
 ```javascript
-let x = -1
+let x = -1;
 
 do {
-    print(x);
-    // show -1
+  print(x);
+  // show -1
 } while (x > 10);
 
-
 // code above instead with while
-let x = -1
+let x = -1;
 
 print(x);
 while (x > 10) {
-    print(x);
+  print(x);
+}
+```
+
+## Functions and Methods
+
+### Functions
+
+#### Functions definition
+
+Methods / fuctions are used, to avoid writing the same code multiple times. Imagine a world, in which you didn't have methods or functions, you would have to write certain parts 1000x over and over again, just as with loops. But if you ever had to make a (small / big) change in code, that is written 1000x and practically the same, you would have to do it everywhere. If the change only took 1 second, you would already lose 1000 seconds or 15 minutes.
+
+#### method Syntax
+
+```ruby
+def sqrt(a) do
+    return a**0.5
+end
+
+def squared(a) do
+    return a**2
+end
+
+# lambda
+(a) -> a**2
+```
+
+#### Examples of methods
+
+```javascript
+function celsius(a) {
+  console.log(a * 2 + 30);
+}
+
+// lambda
+// const celsius = (a) => console.log(a * 2 + 30);
+
+celsius(77);
+celsius(88);
+```
+
+```java
+Public Class Methods {
+    Public static void main (string[] args) {
+        int a = 4;
+        int b = 3;
+        systme.out.println(a * b);
+
+        int c = 8;
+        int d = 34;
+        systme.out.println(c * d);
+
+        int e = 67;
+        int f = 90;
+        systme.out.println(e * f);
+    }
+}
+```
+
+```Java
+Public Class Methods {
+    Public static void main (string[] args) {
+        Multiply(4, 3);
+        Multiply(8, 34);
+        Multiply(67, 90);
+        Multiply(75, 4);
+    }
+     Public static void multiply (int a, int b) {
+        System.out.println(a * b)
+    }
 }
 ```
