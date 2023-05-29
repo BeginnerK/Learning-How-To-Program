@@ -5,48 +5,49 @@
 - Data Types: The different kinds of data that can be stored in variables, such as numbers, characters, booleans, etc.
 - Conditional Statements:
 
-   * If-else: Allows the program to make decisions based on a condition.
-   * Switch: Provides multiple branches of execution based on different values of a variable.
+  - If-else: Allows the program to make decisions based on a condition.
+  - Switch: Provides multiple branches of execution based on different values of a variable.
 
 - Loops:
 
-    * While: Repeatedly executes a block of code while a condition is true.
-   * For: Repeats a block of code a specific number of times.
-   * Do-while: Executes a block of code at least once, then repeatedly executes it while a condition is true.
+  - While: Repeatedly executes a block of code while a condition is true.
+  - For: Repeats a block of code a specific number of times.
+  - Do-while: Executes a block of code at least once, then repeatedly executes it while a condition is true.
 
 - Operators:
 
-    * Arithmetic Operators:
+  - Arithmetic Operators:
 
-       - Addition (+)
-       - Subtraction (-)
-       - Multiplication (*)
-       - Division (/)
-        - Modulo (Remainder) (%)
+    - Addition (+)
+    - Subtraction (-)
+    - Multiplication (\*)
+    - Division (/)
+    - Modulo (Remainder) (%)
 
-    * Assignment Operators:
+  - Assignment Operators:
 
-        - Assignment (=)
-        - Compound assignment operators (e.g., +=, -=, *=, /=)
+    - Assignment (=)
+    - Compound assignment operators (e.g., +=, -=, \*=, /=)
 
-    * Comparison Operators:
+  - Comparison Operators:
 
-       - Equal to (==)
-       - Not equal to (!=)
-       - Greater than (>)
-       - Less than (<)
-       - Greater than or equal to (>=)
-       - Less than or equal to (<=)
+    - Equal to (==)
+    - Not equal to (!=)
+    - Greater than (>)
+    - Less than (<)
+    - Greater than or equal to (>=)
+    - Less than or equal to (<=)
 
-    * Logical Operators:
-       - Logical AND (&&)
-       - Logical OR (||)
-       - Logical NOT (!)
+  - Logical Operators:
 
-    * Increment/Decrement Operators:
+    - Logical AND (&&)
+    - Logical OR (||)
+    - Logical NOT (!)
 
-       - Increment (++)
-       - Decrement (--)
+  - Increment/Decrement Operators:
+
+    - Increment (++)
+    - Decrement (--)
 
 - Functions/Methods: Blocks of reusable code that perform specific tasks and can be called from different parts of the program.
 - Arrays/Lists: Data structures that allow storing multiple values in a single variable, enabling efficient storage and retrieval of data.
@@ -120,9 +121,9 @@ An if-else block (always together), is something that happens conditionally.
 
 ```ruby
 if (condition) then
-    ...
+    # ...
 else
-    ...
+    # ...
 end
 ```
 
@@ -451,4 +452,356 @@ Public Class Methods {
         System.out.println(a * b)
     }
 }
+```
+
+## Operators
+
+### Arithmetic Operators
+
+#### Addition (+)
+
+```javascript
+function three() {
+  return 3;
+}
+
+function four() {
+  return 4;
+}
+
+console.log(three() + four());
+// 7
+```
+
+#### Subtraction (-)
+
+```javascript
+function three() {
+  return 3;
+}
+
+function four() {
+  return 4;
+}
+
+console.log(three() - four()); // -1
+```
+
+#### Multiplication (\*)
+
+```javascript
+function three() {
+  return 3;
+}
+
+function four() {
+  return 4;
+}
+
+console.log(three() * four()); // 12
+```
+
+#### Division (/)
+
+```javascript
+function three() {
+  return 3;
+}
+
+function four() {
+  return 4;
+}
+
+console.log(three() % four()); // 0.75
+```
+
+#### Modulo (Remainder) (%)
+
+```javascript
+function three() {
+  return 3;
+}
+
+function four() {
+  return 4;
+}
+
+console.log(three() + four()); // 3
+```
+
+### Assignment Operators
+
+#### Assignment (=)
+
+```ruby
+three = 3
+print(three) # 3
+three = 10
+print(three) # 10
+```
+
+#### Compound assignment operators (e.g., +=, -=, \*=, /=, %=)
+
+```javascript
+let three = 3;
+print(three); // 3
+
+three += 3;
+// the same as: three = three + 3
+print(three); // 6
+
+three -= 3;
+// the same as: three = three - 3
+print(three); // 3
+
+three *= 3;
+// the same as: three = three * 3
+print(three); // 9
+
+three /= 3;
+// the same as: three = three / 3
+print(three); // 3
+
+three %= 3;
+// the same as: three = three % 3
+print(three); // 0
+```
+
+### Comparison Operators
+
+#### Equal to (==)
+
+Check the equality between 2 items. Is 1 equal to 1? yes, then it returns true. Is 2 equal to 4? no, then it returns false.
+
+```ruby
+three = 3
+print(three == 3) # true
+print(three == 4) # false
+print(true == true) # true
+print(false == true) # false
+```
+
+#### Not equal to (!=)
+
+```ruby
+three = 3
+print(three != 3) # false
+print(three != 4) # true
+print(true != true) # false
+print(false != true) # true
+```
+
+#### Greater than (>)
+
+```ruby
+three = 3
+print(three > 3) # false
+print(three > 4) # false
+print(three > 0) # true
+```
+
+#### Less than (<)
+
+```ruby
+three = 3
+print(three < 3) # false
+print(three < 4) # true
+print(three < 0) # false
+```
+
+#### Greater than or equal to (>=)
+
+```ruby
+three = 3
+print(three >= 3) # true
+print(three >= 4) # false
+print(three >= 0) # true
+```
+
+#### Less than or equal to (<=)
+
+```ruby
+three = 3
+print(three <= 3) # true
+print(three <= 4) # true
+print(three <= 0) # false
+```
+
+### Logical Operators
+
+#### Logical AND (&&)
+
+```ruby
+three = 3
+iAmBeautiful = true
+print(three <= 3 && iAmBeautiful && 1 >= 0) # true
+print(three <= 3 && iAmBeautiful && 1 <= 0) # false
+print(three <= 4 && iAmBeautiful && 1 >= 0) # true
+print(three <= 0 && iAmBeautiful && 1 >= 0) # false
+```
+
+#### Logical OR (||)
+
+```ruby
+three = 3
+iAmBeautiful = true
+
+print(three <= 3 || iAmBeautiful || 1 >= 0) # true
+print(three <= 3 || iAmBeautiful || 1 <= 0) # true
+print(three <= 4 || iAmBeautiful || 1 >= 0) # true
+print(three <= 0 || iAmBeautiful || 1 >= 0) # true
+```
+
+#### Logical NOT (!)
+
+```ruby
+three = 3
+iAmBeautiful = true
+
+print(!iAmBeautiful) # false
+print(iAmBeautiful) # true
+print(!(three == 3)) # false
+print(!(three < 3)) # true
+print(!(three > 3)) # true
+print(!(three != 3)) # true
+```
+
+### Increment/Decrement Operators
+
+#### Increment (++)
+
+```javascript
+let three = 3;
+
+print(three); // 3
+
+three++;
+print(three); // 4
+
+three += 1;
+print(three); // 5
+
+three++;
+print(three); // 6
+```
+
+#### Decrement (--)
+
+```javascript
+let three = 3;
+
+print(three); // 3
+
+three--;
+print(three); // 2
+
+three -= 1;
+print(three); // 1
+
+three--;
+print(three); // 0
+```
+
+## Arrays/lists
+
+### Syntax
+
+#### Array
+
+Has a fixed length. Limited lists.
+
+#### List
+
+Has variable size.
+
+#### Similarities
+
+```ruby
+beautifulList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+userList = [user1, user2, user3, user4, user5, user6, user7, user8, user9, user10]
+
+## array example
+# array of size 4
+# add 1 to array
+# [1]
+#
+# array of size 4
+# add 2 to array
+# [1, 2]
+#
+# array of size 4
+# add 3 to array
+# [1, 2 , 3]
+#
+# array of size 4
+# add 4 to array
+# [1, 2, 3, 4]
+# full
+#
+# array of size 4
+# add 5 to array
+# error
+
+
+## list example
+# list of size 4
+# add 1 to list
+# [1]
+#
+# list of size 4
+# add 2 to list
+# [1, 2]
+#
+# list of size 4
+# add 3 to list
+# [1, 2 , 3]
+#
+# list of size 4
+# add 4 to list
+# [1, 2, 3, 4]
+# full
+#
+# try to add 5 to list
+# size of list exceeded, make new array (under the hood), with double the size
+# list of size 8
+#  opy all items to the new array
+# add 5 to list
+# [1, 2, 3, 4, 5]
+```
+
+## Advanced Structures
+
+### Map/Dictionaries
+
+In real life:
+A dictionary contains words with their explanation(-s).
+
+In programming land:
+A dictionary contains key-value pairs.
+The key is the word, the value is the explanation or list of explanations.
+
+```javascript
+let cuteMappy = new Map();
+cuteMappy.add(
+  "smile",
+  "a smile is an indication of happiness, but not exclusive to happiness alone, a smile can mean many things, but in general is associated with a happy and healthy person."
+);
+// key value pairs
+```
+
+### Set
+
+A set is a list of unique values.
+NO MULTIPLE THE SAME VALUES ALLOWED!
+
+```javascript
+let omgSettie = new Set();
+
+omgSettie.add([
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 1, 2, 3, 4, 5,
+  6,
+]);
+
+print(omgSettie);
+// [1, 2, 3, 4, 5, 6, 7, 8 , 9, 10]
 ```
