@@ -83,7 +83,7 @@ something = ""
 example:
 
 ```javascript
-let hey = "";
+let hey = "text only";
 ```
 
 ```ruby
@@ -358,6 +358,19 @@ while (counter <= 100) do
     # first time its 0 + 1 = 1
     # second time its 1 + 1 = 2
 end
+```
+
+```javascript
+const array = [1, 2, 3, 4];
+
+for (let counter = 0; counter < array.length; counter++) {
+  console.log(array[counter]);
+  // 1
+  // 2
+  // 3
+  // 4
+  // NaN
+}
 ```
 
 ### Do while
@@ -708,10 +721,12 @@ print(three); // 0
 
 #### Array
 
+First element starts at index 0.
 Has a fixed length. Limited lists.
 
 #### List
 
+First element starts at index 0.
 Has variable size.
 
 #### Similarities
@@ -804,4 +819,59 @@ omgSettie.add([
 
 print(omgSettie);
 // [1, 2, 3, 4, 5, 6, 7, 8 , 9, 10]
+```
+
+## Exercises
+
+### Calculate average of list of numbers
+
+2 ways to do it:
+
+1. calculate sum and then divide by amount of numbers.
+2. add the division of number by amount to a variable called average.
+
+```javascript
+// first way
+array = [1, 2, 3, 4];
+sum += 1;
+sum += 2;
+sum += 3;
+sum += 4;
+// sum is 10
+
+sum /=
+  array.length[
+    // sum is 10/4 =  2.5
+
+    // second way
+    (1, 2, 3, 4)
+  ];
+sum += 1 / array.length; // 0.25
+sum += 2 / array.length; // 0.5
+sum += 3 / array.length; // 0.75
+sum += 4 / array.length; // 1
+// sum = 2.5
+```
+
+#### Solution
+
+```javascript
+function findAverage(array) {
+  // If there are "n" numbers in a list
+  // then you divide the sum of the list with "n"
+  // otherwise the result will be 0
+  let average = 0;
+
+  if (array.length > 0) {
+    let sum = 0;
+
+    for (let counter = 0; counter < array.length; counter++) {
+      sum += array[counter];
+    }
+
+    average = sum / array.length;
+  }
+
+  return average;
+}
 ```
