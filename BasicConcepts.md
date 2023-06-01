@@ -968,7 +968,7 @@ function powersOfTwo(n) {
 }
 ```
 
-### Sum of positive
+### Sum of positive numbers
 
 ```javascript
 function positiveSum(arr) {
