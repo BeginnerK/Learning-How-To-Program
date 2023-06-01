@@ -967,6 +967,7 @@ function powersOfTwo(n) {
   return calculatePowersOfTwo;
 }
 ```
+
 ### Sum of positive
 
 ```javascript
@@ -983,5 +984,18 @@ function positiveSum(arr) {
     }
   }
   return sum;
+}
+```
+
+### Remove duplicates from lists (array)
+
+```javascript
+function distinct(a) {
+  // removes duplicates/ only show a number once 
+  
+  let noduplicates = new Set(a) ;
+  let array = Array.from(noduplicates);
+  
+  return array;
 }
 ```
