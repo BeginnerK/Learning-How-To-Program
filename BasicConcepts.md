@@ -967,3 +967,21 @@ function powersOfTwo(n) {
   return calculatePowersOfTwo;
 }
 ```
+### Sum of positive
+
+```javascript
+function positiveSum(arr) {
+  // you need to sum the positive numbers only
+  // excude the negative numbers 
+  // then if you don't have any positive numbers then the sum is 0
+ 
+  let sum = 0;
+  
+  for ( let counter = 0; counter < arr.length; counter++){
+    if (arr[counter] > 0){
+      sum += arr[counter];
+    }
+  }
+  return sum;
+}
+```
