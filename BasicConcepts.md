@@ -49,6 +49,7 @@
     - Increment (++)
     - Decrement (--)
 
+- Scope
 - Functions/Methods: Blocks of reusable code that perform specific tasks and can be called from different parts of the program.
 - Arrays/Lists: Data structures that allow storing multiple values in a single variable, enabling efficient storage and retrieval of data.
 - Advanced structures: Dictionaries, Sets, ...
@@ -396,6 +397,79 @@ print(x);
 while (x > 10) {
   print(x);
 }
+```
+
+## Scope
+
+### What is scope?
+
+Some created variables have a different scope, depending on identifier.
+
+In JS, you have 3 ways to create a variable:
+
+- `let`: local scope
+- `const`: local scope
+- `var`: global scope
+
+### Var -- deprecated (a.k.a. NEVER EVER FUCKING USE IT)
+
+`var` is different from `let` and `const`, in the way that when you create a `var` variable that's its declared in the whole document.
+Which means in other words, no matter where you are in a function, outside of a function, somewhere else, that you can access the `var` variable, e.g.:
+
+```javascript
+// Example using var
+function exampleVar() {
+  if (true) {
+    var x = 10;
+    console.log(x); // Output: 10
+  }
+  console.log(x); // Output: 10
+  x = 20;
+  console.log(x); // Output: 20
+}
+exampleVar();
+console.log(x); // Output: ReferenceError: x is not defined
+```
+
+As seen in the example, even when you create a variable with `var` in an if-block, you can still access it outside of the if-block.
+This can lead to some unexpected behaviour... and is generally bad practice.
+
+### Let and const
+
+With `let` and `const` variables are restricted to the local-scope. It's only accessible in the block that it is declared and underlying blocks.
+Which means that you can't access a variable outside of where it is declared (e.g.: if/for/while/...).
+
+Example of `let`:
+
+```javascript
+// Example using let
+function exampleLet() {
+  if (true) {
+    let y = 10;
+    console.log(y); // Output: 10
+  }
+  console.log(y); // Output: ReferenceError: y is not defined
+  y = 20;
+  console.log(y); // Output: 20
+}
+exampleLet();
+console.log(y); // Output: ReferenceError: y is not defined
+```
+
+Example of `const`:
+
+```javascript
+// Example using const
+function exampleConst() {
+  if (true) {
+    const z = 10;
+    console.log(z); // Output: 10
+  }
+  console.log(z); // Output: ReferenceError: z is not defined
+  z = 20; // Error: Assignment to constant variable.
+}
+exampleConst();
+console.log(z); // Output: ReferenceError: z is not defined
 ```
 
 ## Functions and Methods
@@ -873,5 +947,23 @@ function findAverage(array) {
   }
 
   return average;
+}
+```
+
+### Calculate 0 to n, powers of 2
+
+```javascript
+function powersOfTwo(n) {
+  // 2^n
+  // n needs to be count from 0 inclusively
+  // calculate for each number 2 to the power of the number x
+  let calculatePowersOfTwo = [];
+  for (let counter = 0; counter <= n; counter++) {
+    let poweroftwo = 2 ** counter;
+    calculatePowersOfTwo.push(poweroftwo);
+    console.log(poweroftwo);
+  }
+
+  return calculatePowersOfTwo;
 }
 ```
