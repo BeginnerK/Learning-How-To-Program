@@ -999,3 +999,45 @@ function distinct(a) {
   return array;
 }
 ```
+### Returning Strings
+
+```javascript
+function greet(name){
+  // return a sentence differnetly input different words
+  // "Hello, x how are you doing today?"
+  let thegreeting = "Hello, " + name + " how are you doing today?";
+  
+  return thegreeting
+}
+```
+
+### Opposite number
+#### example 1
+```javascript
+function opposite(number) {
+    return number * (-1);
+}
+```
+#### example 2
+```javascript
+function opposite(number) {
+    return -number;
+}
+```
+
+### Is it a palindrome?
+
+```javascript
+function isPalindrome(x) {
+  
+  let y = "";
+  x = x.toLowerCase(); // change from big letter to small letter. 
+  
+  for (let counter = x.length-1; counter >= 0; counter--){
+    y += x[counter]; // if you do 'y = x[counter]' then it replace every next letter everything so you will only get the last/first letter. 
+   console.log(y);
+  }
+    
+  return y == x;
+}
+```
