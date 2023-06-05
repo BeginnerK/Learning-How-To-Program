@@ -599,7 +599,7 @@ function four() {
   return 4;
 }
 
-console.log(three() % four()); // 0.75
+console.log(three() / four()); // 0.75
 ```
 
 #### Modulo (Remainder) (%)
@@ -613,7 +613,7 @@ function four() {
   return 4;
 }
 
-console.log(three() + four()); // 3
+console.log(three() % four()); // 3
 ```
 
 ### Assignment Operators
@@ -999,6 +999,7 @@ function distinct(a) {
   return array;
 }
 ```
+
 ### Returning Strings
 
 ```javascript
@@ -1012,13 +1013,17 @@ function greet(name){
 ```
 
 ### Opposite number
+
 #### example 1
+
 ```javascript
 function opposite(number) {
     return number * (-1);
 }
 ```
+
 #### example 2
+
 ```javascript
 function opposite(number) {
     return -number;
@@ -1039,5 +1044,48 @@ function isPalindrome(x) {
   }
     
   return y == x;
+}
+```
+
+### Even or Odd?
+
+```javascript
+function evenOrOdd(number) {
+  // number % 2 => if result 1 or -1 is odd, result 0 is even.
+  let result = number % 2;
+  // can't put result == 1|| -1 but you can put them separately tho.
+  if (result == 0){
+    return "Even"
+  }
+  else {
+    return "Odd"
+  }
+}
+```
+
+### Highest and Lowest
+
+```javascript
+function highAndLow(numbers){
+  // so return the highest number and the lowest number in the array or list
+  // if you can't go above x number meaning the highest
+  // if you can't go below x number meaning the lowest 
+  
+  numbers = numbers.split(" ").map(i => +i);
+  let highest = numbers[0];
+  let lowest = numbers[0]
+  
+  for (let counter = 1; counter < numbers.length; counter++){
+    let currentNumber = numbers[counter];
+
+    if (currentNumber > highest){
+      highest = currentNumber
+    }
+     if (currentNumber < lowest){
+      lowest = currentNumber
+    }
+  }
+  
+  return (highest +' '+ lowest)
 }
 ```
