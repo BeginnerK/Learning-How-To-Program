@@ -1089,3 +1089,36 @@ function highAndLow(numbers){
   return (highest +' '+ lowest)
 }
 ```
+
+### Multiply
+This code does not execute properly. Try to figure out why.
+```javascript
+function multiply(a, b){
+  return a * b
+}
+```
+
+### Convert boolean values to strings 'Yes' or 'No'.
+Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+```javascript
+function boolToWord( bool ){
+  if (bool == true) return 'Yes';
+  if (bool == false) return 'No';
+}
+```
+
+## Square(n) Sum
+Complete the square sum function so that it squares each number passed into it and then sums the results together.
+For example, for [1, 2, 2] it should return 9 because 12+22+22=91^2 + 2^2 + 2^2 = 912+22+22=
+```javascript
+function squareSum(numbers){
+  // first number * number each
+  // then plus them together
+  let sum = 0;
+  for (let counter = 0; counter < numbers.length; counter++){
+    let squares = numbers[counter] * numbers[counter];
+    sum += squares
+  }
+  return sum;
+}
+```
