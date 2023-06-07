@@ -1091,15 +1091,19 @@ function highAndLow(numbers){
 ```
 
 ### Multiply
+
 This code does not execute properly. Try to figure out why.
+
 ```javascript
 function multiply(a, b){
   return a * b
 }
 ```
 
-### Convert boolean values to strings 'Yes' or 'No'.
+### Convert boolean values to strings 'Yes' or 'No'
+
 Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+
 ```javascript
 function boolToWord( bool ){
   if (bool == true) return 'Yes';
@@ -1108,8 +1112,10 @@ function boolToWord( bool ){
 ```
 
 ## Square(n) Sum
+
 Complete the square sum function so that it squares each number passed into it and then sums the results together.
 For example, for [1, 2, 2] it should return 9 because 12+22+22=91^2 + 2^2 + 2^2 = 912+22+22=
+
 ```javascript
 function squareSum(numbers){
   // first number * number each
@@ -1120,5 +1126,37 @@ function squareSum(numbers){
     sum += squares
   }
   return sum;
+}
+```
+
+## Return Negative
+
+In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+```javascript
+function makeNegative(num) {
+  if(num >= 0){
+   return -num
+  } // you don't need to add another if here because it already there and what you want to write next is the opposite of that if.
+  // when you check for all numbers greater than or equal to 0, you don't have to check for number smaller than 0, since when you get that far, those numbers are the only numbers left, the other numbers got filtered out in the previous if statement
+  return num
+}
+```
+## Reversed Strings
+Complete the solution so that it reverses the string passed into it. 
+'world'  =>  'dlrow'
+
+```javascript
+function solution(str){
+
+  let reverse = ""; // you want reverse to be strings so you put that little two weird things
+  
+  for (let counter = str.length-1; counter >= 0;counter --){
+    // the counter is set to length-1 because it start counting from 0 (the first letter is place 0)
+    // the counter needs to be orderly 1 > 2 > 3 
+    reverse += str[counter]
+  }
+  
+    return reverse
 }
 ```
