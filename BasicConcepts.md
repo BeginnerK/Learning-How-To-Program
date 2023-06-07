@@ -1111,7 +1111,7 @@ function boolToWord( bool ){
 }
 ```
 
-## Square(n) Sum
+### Square(n) Sum
 
 Complete the square sum function so that it squares each number passed into it and then sums the results together.
 For example, for [1, 2, 2] it should return 9 because 12+22+22=91^2 + 2^2 + 2^2 = 912+22+22=
@@ -1129,7 +1129,7 @@ function squareSum(numbers){
 }
 ```
 
-## Return Negative
+### Return Negative
 
 In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
 
@@ -1142,8 +1142,10 @@ function makeNegative(num) {
   return num
 }
 ```
-## Reversed Strings
-Complete the solution so that it reverses the string passed into it. 
+
+### Reversed Strings
+
+Complete the solution so that it reverses the string passed into it.
 'world'  =>  'dlrow'
 
 ```javascript
