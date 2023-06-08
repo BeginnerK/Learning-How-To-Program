@@ -960,14 +960,13 @@ function powersOfTwo(n) {
   let calculatePowersOfTwo = [];
   for (let counter = 0; counter <= n; counter++) {
     let poweroftwo = 2 ** counter;
-    calculatePowersOfTwo.push(poweroftwo);
+    calculatePowersOfTwo.push(poweroftwo); // to put it in the array
     console.log(poweroftwo);
   }
 
   return calculatePowersOfTwo;
 }
 ```
-
 ### Sum of positive numbers
 
 ```javascript
@@ -1161,4 +1160,28 @@ function solution(str){
   
     return reverse
 }
+```
+
+### Convert a Number to a String!
+We need a function that can transform a number (integer) into a string. 123  --> "123"
+
+```javascript
+function numberToString(num) {
+  return num = ''+num // =if you put "" it means that you want to turn the inside "" into words/ string.
+}
+```
+
+### Reversed sequence
+Build a function that returns an array of integers from n to 1 where n>0.
+Example : n=5 --> [5,4,3,2,1]
+
+```javascript
+const reverseSeq = n => {
+  let reverse = []; // this is to create an array
+  
+  for (let counter = n; counter > 0; counter--) {
+    reverse.push(counter) // this is yo put things in the array
+  }
+  return reverse;
+};
 ```
