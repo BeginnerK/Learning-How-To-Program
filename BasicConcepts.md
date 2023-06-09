@@ -1168,6 +1168,7 @@ We need a function that can transform a number (integer) into a string. 123  -->
 ```javascript
 function numberToString(num) {
   return num = ''+num // =if you put "" it means that you want to turn the inside "" into words/ string.
+  // or return ''+num
 }
 ```
 
@@ -1184,4 +1185,20 @@ const reverseSeq = n => {
   }
   return reverse;
 };
+```
+### Remove First and Last Character
+
+```javascript
+function removeChar(str){
+  
+  let removezero = ''; 
+  
+  for (let counter = 1; counter < str.length-1; counter++){
+    removezero += str[counter] // if you want to reduce/increase the length of your array just usw - and  + sign with the number you want to reduce/increase 
+  } 
+  
+  return removezero // always return or console.log() to check your code! otherwise they might return "undefined" 
+};
+
+
 ```
