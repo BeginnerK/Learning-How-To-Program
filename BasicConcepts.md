@@ -967,6 +967,7 @@ function powersOfTwo(n) {
   return calculatePowersOfTwo;
 }
 ```
+
 ### Sum of positive numbers
 
 ```javascript
@@ -1162,7 +1163,8 @@ function solution(str){
 }
 ```
 
-### Convert a Number to a String!
+### Convert a Number to a String
+
 We need a function that can transform a number (integer) into a string. 123  --> "123"
 
 ```javascript
@@ -1173,6 +1175,7 @@ function numberToString(num) {
 ```
 
 ### Reversed sequence
+
 Build a function that returns an array of integers from n to 1 where n>0.
 Example : n=5 --> [5,4,3,2,1]
 
@@ -1181,11 +1184,12 @@ const reverseSeq = n => {
   let reverse = []; // this is to create an array
   
   for (let counter = n; counter > 0; counter--) {
-    reverse.push(counter) // this is yo put things in the array
+    reverse.push(counter) // this is yo put things in the array !!! can't use with stringd!!!
   }
   return reverse;
 };
 ```
+
 ### Remove First and Last Character
 
 ```javascript
@@ -1199,6 +1203,21 @@ function removeChar(str){
   
   return removezero // always return or console.log() to check your code! otherwise they might return "undefined" 
 };
+```
 
+### String repeat
 
+Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+6, "I"     -> "IIIIII"
+
+```javascript
+function repeatStr (n, s) {
+  
+  let total = '';
+  
+  for (let counter = 0; counter < n; counter++){
+    total += s; // you don't need to put "counter" after "s",Since you put the "s" inside the "for" function, you don't have to repeat it. The counter is already there inside the "for" function.
+  }
+  return total;
+ }
 ```
