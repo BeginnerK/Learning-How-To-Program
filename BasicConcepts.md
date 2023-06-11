@@ -1221,3 +1221,21 @@ function repeatStr (n, s) {
   return total;
  }
 ```
+
+### Contamination #1 -String
+
+text before = "abc"
+character   = "z"
+text after  = "zzz"
+
+```javascript
+function contamination(text, char){
+  
+  let result = '';
+  
+  for (let counter = 0; counter < text.length; counter++){
+    result += char
+  }
+  return result
+}
+```
