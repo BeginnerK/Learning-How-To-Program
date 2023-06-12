@@ -1239,3 +1239,19 @@ function contamination(text, char){
   return result
 }
 ```
+
+### Grassshopper - sum
+input 2, result 3 (1 + 2)
+input 8, result 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
+
+```javascript
+var summation = function (num) {
+  
+  let total = 0;
+  
+  for (let counter = 0; counter < num+1; counter++ ){
+    total += counter 
+  }
+  return total;
+}
+```
