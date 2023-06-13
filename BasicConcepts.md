@@ -1255,3 +1255,54 @@ var summation = function (num) {
   return total;
 }
 ```
+
+### Capitalization and Mutability
+
+Make the first letter big (capitalized it)
+
+```javascript
+function capitalizeWord(word) {
+  
+  let followWords = '';
+   let firstLetter = '';
+  firstLetter = word[0].toUpperCase(); // capitalized words
+  
+  for (let counter = 1; counter < word.length; counter++){
+    
+    followWords += word[counter];
+  }
+  return  firstLetter + followWords;
+}
+```
+
+### Multiple of index
+
+They want you to return every number in the array, for which their index is X times (a multiple) the nunber at position index;
+
+For instance, you receive the following array:
+[1, 2, 3, 4, 5, 6, 7, 8, 12, 24]
+
+your index starts of with 0 and there you have number 1, is 0+0+0+0 ever going to be 1? No
+
+index 1, value 2, is 1+1+... ever going to be 2? Yes 
+
+```javascript
+function multipleOfIndex(array) {
+  
+  let multiple = [];
+  
+  for (let counter = 0; counter < array.length; counter++){
+    if ((array[counter] % counter) == 0 || array[counter] == counter){
+      multiple.push(array[counter])
+    }
+  }
+
+  return multiple;
+}
+```
+
+
+
+
+
+
