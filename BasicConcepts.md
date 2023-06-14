@@ -1301,8 +1301,43 @@ function multipleOfIndex(array) {
 }
 ```
 
+### Find the smallest integer in the array
 
+Given [34, 15, 88, 2] your solution will return 2
 
+```javascript
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    
+    let smallest = args[0];
+    
+    for (let counter = 1; counter < args.length; counter++){
+      let number = args[counter]
+      if (number < smallest){
+       smallest = number
+      } // this is a bit tricky, but if the number is < the smallest (the number position 0) then the smallest = number (which mean the smallest that we will be return is the number)
+    }
+    return smallest;
+  }
+  }
 
+// or return Math.min(...args); which ... is to take the number out of the array
+```
+### Remove String Spaces
 
+Just remove the spaces between words 
 
+```javascript
+function noSpace(x){
+
+  let text = '';
+  
+  for (let counter = 0; counter < x.length; counter++){
+    if (x[counter] != " "){
+      text += x[counter];
+    }
+  }
+  return text;
+}
+// or return x.replaceAll(' ', ''); 
+```
