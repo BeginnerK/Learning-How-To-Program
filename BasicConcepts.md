@@ -1341,3 +1341,30 @@ function noSpace(x){
 }
 // or return x.replaceAll(' ', ''); 
 ```
+
+### Rounded to the smallest value
+
+You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
+ he drinks 0.5 litres of water per hour of cycling.
+
+```javascript
+function litres(time) {
+  let result = time * 0.5 ;
+  result = Math.floor(result) ; // this use to round the number donw 
+  return result ;
+}
+```
+
+### Century from year
+
+Given a year, return the century it is in.
+
+```javascript
+function century(year) {
+  
+  let century = year * 0.01 ;
+  century = Math.ceil(century) ;
+  
+  return century;
+}
+```
