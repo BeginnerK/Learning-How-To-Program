@@ -721,6 +721,7 @@ print(three <= 0) # false
 ```ruby
 three = 3
 iAmBeautiful = true
+# && meaning that if one of the velue is true and others are false then the result will be false
 print(three <= 3 && iAmBeautiful && 1 >= 0) # true
 print(three <= 3 && iAmBeautiful && 1 <= 0) # false
 print(three <= 4 && iAmBeautiful && 1 >= 0) # true
@@ -731,8 +732,8 @@ print(three <= 0 && iAmBeautiful && 1 >= 0) # false
 
 ```ruby
 three = 3
-iAmBeautiful = true
-
+iAmBeautiful = true 
+# || menaing that if one of the value is true then the result will be true.
 print(three <= 3 || iAmBeautiful || 1 >= 0) # true
 print(three <= 3 || iAmBeautiful || 1 <= 0) # true
 print(three <= 4 || iAmBeautiful || 1 >= 0) # true
@@ -1241,6 +1242,7 @@ function contamination(text, char){
 ```
 
 ### Grassshopper - sum
+
 input 2, result 3 (1 + 2)
 input 8, result 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
 
@@ -1284,7 +1286,7 @@ For instance, you receive the following array:
 
 your index starts of with 0 and there you have number 1, is 0+0+0+0 ever going to be 1? No
 
-index 1, value 2, is 1+1+... ever going to be 2? Yes 
+index 1, value 2, is 1+1+... ever going to be 2? Yes
 
 ```javascript
 function multipleOfIndex(array) {
@@ -1323,9 +1325,10 @@ class SmallestIntegerFinder {
 
 // or return Math.min(...args); which ... is to take the number out of the array
 ```
+
 ### Remove String Spaces
 
-Just remove the spaces between words 
+Just remove the spaces between words
 
 ```javascript
 function noSpace(x){
@@ -1366,5 +1369,93 @@ function century(year) {
   century = Math.ceil(century) ;
   
   return century;
+}
+```
+
+### Basic Math
+
+Examples(Operator, value1, value2) --> output
+('+', 4, 7) --> 11
+('-', 15, 18) --> -3
+
+```javascript
+function basicOp(operation, value1, value2)
+{let result = 0;
+  if (operation == "+") { // == is to control if you put only = there, it means you conmand it.
+  result = value1 + value2;
+  }
+  else
+    if (operation == "-") {
+    result= value1 - value2;
+    }
+    else
+      if (operation == "*") {
+      result = value1 * value2;
+       }
+       else
+         if (operation == "/") {
+         result = value1/value2;
+         } // "else" do not have conditions if you have conditions use "else if".
+  return result;
+ }
+ ```
+
+ Or
+
+### Counting sheep
+
+Only count true
+For example,
+
+[true,  true,  true,  false,
+  true,  true,  true,  true ,
+  true,  false, true,  false,
+  true,  false, false, true ,
+  true,  true,  true,  true ,
+  false, false, true,  true]
+
+The correct answer would be 17.
+
+```javascript
+function countSheeps(arrayOfSheep) {
+  let presentSheep = 0;
+  for (let counter = 0; counter < arrayOfSheep.length; counter++){
+    if(arrayOfSheep[counter] == true){
+    // if (arrayOfSheep[counter] != false && arrayOfSheep[counter] != null && arrayOfSheep[counter] != undefined){
+      // presentSheep += arrayOfSheep[counter];
+      // console.log(arrayOfSheep[counter])
+      // console.log(presentSheep)
+      presentSheep++;
+    }
+  }
+  return presentSheep;
+}
+```
+
+### Convert a String to a Number
+
+```javascript
+const stringToNumber = function(str){
+  return str= str - "";
+}
+// return Number(str);
+// return +str;
+```
+
+### Abbreviate a Two Word Name
+
+The output should be two capital letters with a dot separating them.
+It should look like this:
+Sam Harris => S.H
+patrick feeney => P.F
+
+```javascript
+function abbrevName(name){
+
+  let Firstletter = name[0];
+  let Lastname = name.split(' ');
+  
+  return (Firstletter +'.'+Lastname[1][0]).toUpperCase();
+
 }
 ```
