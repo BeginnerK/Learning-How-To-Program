@@ -1459,3 +1459,36 @@ function abbrevName(name){
 
 }
 ```
+### Doubled values
+
+Given an array of integers, return a new array with each value doubled.
+For example:
+[1, 2, 3] --> [2, 4, 6]
+
+```javascript
+function maps(x){
+  let result = [];
+  for (let counter = 0; counter < x.length; counter++){
+    let calcu = x[counter] * 2
+    result.push(calcu)
+  }
+  return result;
+}
+// or  return x.map(n => n * 2);
+```
+
+### A Needle in the Haystack
+
+Write a function findNeedle() that takes an array full of junk but containing one "needle"
+After your function finds the needle it should return a message (as a string) that says:
+"found the needle at position " plus the index it found the needle, so: 
+
+```javascript
+function findNeedle(haystack) {
+  for (let counter = 0; counter < haystack.length; counter++) {
+    if (haystack[counter] == 'needle') {
+      return 'found the needle at position '+ counter
+    }
+  }
+}
+```
