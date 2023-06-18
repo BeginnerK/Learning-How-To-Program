@@ -479,21 +479,20 @@ console.log(z); // Output: ReferenceError: z is not defined
 #### Functions definition
 
 Methods / fuctions are used, to avoid writing the same code multiple times. Imagine a world, in which you didn't have methods or functions, you would have to write certain parts 1000x over and over again, just as with loops. But if you ever had to make a (small / big) change in code, that is written 1000x and practically the same, you would have to do it everywhere. If the change only took 1 second, you would already lose 1000 seconds or 15 minutes.
+Modulo
 
-#### method Syntax
+#### method SyntaxAddition (+)
 
-```ruby
-def sqrt(a) do
-    return a**0.5
-end
-
-def squared(a) do
-    return a**2
-end
+    - Subtraction (-)
+    - Multiplication (\*)
+    - Division (/)
+    - Modulo (Remainder) (%)
 
 # lambda
-(a) -> a**2
-```
+
+(a) -> a\*\*2
+
+````
 
 #### Examples of methods
 
@@ -507,7 +506,7 @@ function celsius(a) {
 
 celsius(77);
 celsius(88);
-```
+````
 
 ```java
 Public Class Methods {
@@ -732,7 +731,7 @@ print(three <= 0 && iAmBeautiful && 1 >= 0) # false
 
 ```ruby
 three = 3
-iAmBeautiful = true 
+iAmBeautiful = true
 # || menaing that if one of the value is true then the result will be true.
 print(three <= 3 || iAmBeautiful || 1 >= 0) # true
 print(three <= 3 || iAmBeautiful || 1 <= 0) # true
@@ -974,13 +973,13 @@ function powersOfTwo(n) {
 ```javascript
 function positiveSum(arr) {
   // you need to sum the positive numbers only
-  // excude the negative numbers 
+  // excude the negative numbers
   // then if you don't have any positive numbers then the sum is 0
- 
+
   let sum = 0;
-  
-  for ( let counter = 0; counter < arr.length; counter++){
-    if (arr[counter] > 0){
+
+  for (let counter = 0; counter < arr.length; counter++) {
+    if (arr[counter] > 0) {
       sum += arr[counter];
     }
   }
@@ -992,11 +991,11 @@ function positiveSum(arr) {
 
 ```javascript
 function distinct(a) {
-  // removes duplicates/ only show a number once 
-  
-  let noduplicates = new Set(a) ;
+  // removes duplicates/ only show a number once
+
+  let noduplicates = new Set(a);
   let array = Array.from(noduplicates);
-  
+
   return array;
 }
 ```
@@ -1004,12 +1003,12 @@ function distinct(a) {
 ### Returning Strings
 
 ```javascript
-function greet(name){
+function greet(name) {
   // return a sentence differnetly input different words
   // "Hello, x how are you doing today?"
   let thegreeting = "Hello, " + name + " how are you doing today?";
-  
-  return thegreeting
+
+  return thegreeting;
 }
 ```
 
@@ -1019,7 +1018,7 @@ function greet(name){
 
 ```javascript
 function opposite(number) {
-    return number * (-1);
+  return number * -1;
 }
 ```
 
@@ -1027,7 +1026,7 @@ function opposite(number) {
 
 ```javascript
 function opposite(number) {
-    return -number;
+  return -number;
 }
 ```
 
@@ -1035,15 +1034,14 @@ function opposite(number) {
 
 ```javascript
 function isPalindrome(x) {
-  
   let y = "";
-  x = x.toLowerCase(); // change from big letter to small letter. 
-  
-  for (let counter = x.length-1; counter >= 0; counter--){
-    y += x[counter]; // if you do 'y = x[counter]' then it replace every next letter everything so you will only get the last/first letter. 
-   console.log(y);
+  x = x.toLowerCase(); // change from big letter to small letter.
+
+  for (let counter = x.length - 1; counter >= 0; counter--) {
+    y += x[counter]; // if you do 'y = x[counter]' then it replace every next letter everything so you will only get the last/first letter.
+    console.log(y);
   }
-    
+
   return y == x;
 }
 ```
@@ -1055,11 +1053,10 @@ function evenOrOdd(number) {
   // number % 2 => if result 1 or -1 is odd, result 0 is even.
   let result = number % 2;
   // can't put result == 1|| -1 but you can put them separately tho.
-  if (result == 0){
-    return "Even"
-  }
-  else {
-    return "Odd"
+  if (result == 0) {
+    return "Even";
+  } else {
+    return "Odd";
   }
 }
 ```
@@ -1067,27 +1064,27 @@ function evenOrOdd(number) {
 ### Highest and Lowest
 
 ```javascript
-function highAndLow(numbers){
+function highAndLow(numbers) {
   // so return the highest number and the lowest number in the array or list
   // if you can't go above x number meaning the highest
-  // if you can't go below x number meaning the lowest 
-  
-  numbers = numbers.split(" ").map(i => +i);
+  // if you can't go below x number meaning the lowest
+
+  numbers = numbers.split(" ").map((i) => +i);
   let highest = numbers[0];
-  let lowest = numbers[0]
-  
-  for (let counter = 1; counter < numbers.length; counter++){
+  let lowest = numbers[0];
+
+  for (let counter = 1; counter < numbers.length; counter++) {
     let currentNumber = numbers[counter];
 
-    if (currentNumber > highest){
-      highest = currentNumber
+    if (currentNumber > highest) {
+      highest = currentNumber;
     }
-     if (currentNumber < lowest){
-      lowest = currentNumber
+    if (currentNumber < lowest) {
+      lowest = currentNumber;
     }
   }
-  
-  return (highest +' '+ lowest)
+
+  return highest + " " + lowest;
 }
 ```
 
@@ -1096,8 +1093,8 @@ function highAndLow(numbers){
 This code does not execute properly. Try to figure out why.
 
 ```javascript
-function multiply(a, b){
-  return a * b
+function multiply(a, b) {
+  return a * b;
 }
 ```
 
@@ -1106,9 +1103,9 @@ function multiply(a, b){
 Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
 
 ```javascript
-function boolToWord( bool ){
-  if (bool == true) return 'Yes';
-  if (bool == false) return 'No';
+function boolToWord(bool) {
+  if (bool == true) return "Yes";
+  if (bool == false) return "No";
 }
 ```
 
@@ -1118,13 +1115,13 @@ Complete the square sum function so that it squares each number passed into it a
 For example, for [1, 2, 2] it should return 9 because 12+22+22=91^2 + 2^2 + 2^2 = 912+22+22=
 
 ```javascript
-function squareSum(numbers){
+function squareSum(numbers) {
   // first number * number each
   // then plus them together
   let sum = 0;
-  for (let counter = 0; counter < numbers.length; counter++){
+  for (let counter = 0; counter < numbers.length; counter++) {
     let squares = numbers[counter] * numbers[counter];
-    sum += squares
+    sum += squares;
   }
   return sum;
 }
@@ -1136,41 +1133,40 @@ In this simple assignment you are given a number and have to make it negative. B
 
 ```javascript
 function makeNegative(num) {
-  if(num >= 0){
-   return -num
+  if (num >= 0) {
+    return -num;
   } // you don't need to add another if here because it already there and what you want to write next is the opposite of that if.
   // when you check for all numbers greater than or equal to 0, you don't have to check for number smaller than 0, since when you get that far, those numbers are the only numbers left, the other numbers got filtered out in the previous if statement
-  return num
+  return num;
 }
 ```
 
 ### Reversed Strings
 
 Complete the solution so that it reverses the string passed into it.
-'world'  =>  'dlrow'
+'world' => 'dlrow'
 
 ```javascript
-function solution(str){
-
+function solution(str) {
   let reverse = ""; // you want reverse to be strings so you put that little two weird things
-  
-  for (let counter = str.length-1; counter >= 0;counter --){
+
+  for (let counter = str.length - 1; counter >= 0; counter--) {
     // the counter is set to length-1 because it start counting from 0 (the first letter is place 0)
-    // the counter needs to be orderly 1 > 2 > 3 
-    reverse += str[counter]
+    // the counter needs to be orderly 1 > 2 > 3
+    reverse += str[counter];
   }
-  
-    return reverse
+
+  return reverse;
 }
 ```
 
 ### Convert a Number to a String
 
-We need a function that can transform a number (integer) into a string. 123  --> "123"
+We need a function that can transform a number (integer) into a string. 123 --> "123"
 
 ```javascript
 function numberToString(num) {
-  return num = ''+num // =if you put "" it means that you want to turn the inside "" into words/ string.
+  return (num = "" + num); // =if you put "" it means that you want to turn the inside "" into words/ string.
   // or return ''+num
 }
 ```
@@ -1181,11 +1177,11 @@ Build a function that returns an array of integers from n to 1 where n>0.
 Example : n=5 --> [5,4,3,2,1]
 
 ```javascript
-const reverseSeq = n => {
+const reverseSeq = (n) => {
   let reverse = []; // this is to create an array
-  
+
   for (let counter = n; counter > 0; counter--) {
-    reverse.push(counter) // this is yo put things in the array !!! can't use with stringd!!!
+    reverse.push(counter); // this is yo put things in the array !!! can't use with stringd!!!
   }
   return reverse;
 };
@@ -1194,50 +1190,47 @@ const reverseSeq = n => {
 ### Remove First and Last Character
 
 ```javascript
-function removeChar(str){
-  
-  let removezero = ''; 
-  
-  for (let counter = 1; counter < str.length-1; counter++){
-    removezero += str[counter] // if you want to reduce/increase the length of your array just usw - and  + sign with the number you want to reduce/increase 
-  } 
-  
-  return removezero // always return or console.log() to check your code! otherwise they might return "undefined" 
-};
+function removeChar(str) {
+  let removezero = "";
+
+  for (let counter = 1; counter < str.length - 1; counter++) {
+    removezero += str[counter]; // if you want to reduce/increase the length of your array just usw - and  + sign with the number you want to reduce/increase
+  }
+
+  return removezero; // always return or console.log() to check your code! otherwise they might return "undefined"
+}
 ```
 
 ### String repeat
 
 Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
-6, "I"     -> "IIIIII"
+6, "I" -> "IIIIII"
 
 ```javascript
-function repeatStr (n, s) {
-  
-  let total = '';
-  
-  for (let counter = 0; counter < n; counter++){
+function repeatStr(n, s) {
+  let total = "";
+
+  for (let counter = 0; counter < n; counter++) {
     total += s; // you don't need to put "counter" after "s",Since you put the "s" inside the "for" function, you don't have to repeat it. The counter is already there inside the "for" function.
   }
   return total;
- }
+}
 ```
 
 ### Contamination #1 -String
 
 text before = "abc"
-character   = "z"
-text after  = "zzz"
+character = "z"
+text after = "zzz"
 
 ```javascript
-function contamination(text, char){
-  
-  let result = '';
-  
-  for (let counter = 0; counter < text.length; counter++){
-    result += char
+function contamination(text, char) {
+  let result = "";
+
+  for (let counter = 0; counter < text.length; counter++) {
+    result += char;
   }
-  return result
+  return result;
 }
 ```
 
@@ -1248,14 +1241,13 @@ input 8, result 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
 
 ```javascript
 var summation = function (num) {
-  
   let total = 0;
-  
-  for (let counter = 0; counter < num+1; counter++ ){
-    total += counter 
+
+  for (let counter = 0; counter < num + 1; counter++) {
+    total += counter;
   }
   return total;
-}
+};
 ```
 
 ### Capitalization and Mutability
@@ -1264,16 +1256,14 @@ Make the first letter big (capitalized it)
 
 ```javascript
 function capitalizeWord(word) {
-  
-  let followWords = '';
-   let firstLetter = '';
+  let followWords = "";
+  let firstLetter = "";
   firstLetter = word[0].toUpperCase(); // capitalized words
-  
-  for (let counter = 1; counter < word.length; counter++){
-    
+
+  for (let counter = 1; counter < word.length; counter++) {
     followWords += word[counter];
   }
-  return  firstLetter + followWords;
+  return firstLetter + followWords;
 }
 ```
 
@@ -1290,12 +1280,11 @@ index 1, value 2, is 1+1+... ever going to be 2? Yes
 
 ```javascript
 function multipleOfIndex(array) {
-  
   let multiple = [];
-  
-  for (let counter = 0; counter < array.length; counter++){
-    if ((array[counter] % counter) == 0 || array[counter] == counter){
-      multiple.push(array[counter])
+
+  for (let counter = 0; counter < array.length; counter++) {
+    if (array[counter] % counter == 0 || array[counter] == counter) {
+      multiple.push(array[counter]);
     }
   }
 
@@ -1310,18 +1299,17 @@ Given [34, 15, 88, 2] your solution will return 2
 ```javascript
 class SmallestIntegerFinder {
   findSmallestInt(args) {
-    
     let smallest = args[0];
-    
-    for (let counter = 1; counter < args.length; counter++){
-      let number = args[counter]
-      if (number < smallest){
-       smallest = number
+
+    for (let counter = 1; counter < args.length; counter++) {
+      let number = args[counter];
+      if (number < smallest) {
+        smallest = number;
       } // this is a bit tricky, but if the number is < the smallest (the number position 0) then the smallest = number (which mean the smallest that we will be return is the number)
     }
     return smallest;
   }
-  }
+}
 
 // or return Math.min(...args); which ... is to take the number out of the array
 ```
@@ -1331,30 +1319,29 @@ class SmallestIntegerFinder {
 Just remove the spaces between words
 
 ```javascript
-function noSpace(x){
+function noSpace(x) {
+  let text = "";
 
-  let text = '';
-  
-  for (let counter = 0; counter < x.length; counter++){
-    if (x[counter] != " "){
+  for (let counter = 0; counter < x.length; counter++) {
+    if (x[counter] != " ") {
       text += x[counter];
     }
   }
   return text;
 }
-// or return x.replaceAll(' ', ''); 
+// or return x.replaceAll(' ', '');
 ```
 
 ### Rounded to the smallest value
 
 You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
- he drinks 0.5 litres of water per hour of cycling.
+he drinks 0.5 litres of water per hour of cycling.
 
 ```javascript
 function litres(time) {
-  let result = time * 0.5 ;
-  result = Math.floor(result) ; // this use to round the number donw 
-  return result ;
+  let result = time * 0.5;
+  result = Math.floor(result); // this use to round the number donw
+  return result;
 }
 ```
 
@@ -1364,10 +1351,9 @@ Given a year, return the century it is in.
 
 ```javascript
 function century(year) {
-  
-  let century = year * 0.01 ;
-  century = Math.ceil(century) ;
-  
+  let century = year * 0.01;
+  century = Math.ceil(century);
+
   return century;
 }
 ```
@@ -1379,49 +1365,44 @@ Examples(Operator, value1, value2) --> output
 ('-', 15, 18) --> -3
 
 ```javascript
-function basicOp(operation, value1, value2)
-{let result = 0;
-  if (operation == "+") { // == is to control if you put only = there, it means you conmand it.
-  result = value1 + value2;
-  }
-  else
-    if (operation == "-") {
-    result= value1 - value2;
-    }
-    else
-      if (operation == "*") {
-      result = value1 * value2;
-       }
-       else
-         if (operation == "/") {
-         result = value1/value2;
-         } // "else" do not have conditions if you have conditions use "else if".
+function basicOp(operation, value1, value2) {
+  let result = 0;
+  if (operation == "+") {
+    // == is to control if you put only = there, it means you conmand it.
+    result = value1 + value2;
+  } else if (operation == "-") {
+    result = value1 - value2;
+  } else if (operation == "*") {
+    result = value1 * value2;
+  } else if (operation == "/") {
+    result = value1 / value2;
+  } // "else" do not have conditions if you have conditions use "else if".
   return result;
- }
- ```
+}
+```
 
- Or
+Or
 
 ### Counting sheep
 
 Only count true
 For example,
 
-[true,  true,  true,  false,
-  true,  true,  true,  true ,
-  true,  false, true,  false,
-  true,  false, false, true ,
-  true,  true,  true,  true ,
-  false, false, true,  true]
+[true, true, true, false,
+true, true, true, true ,
+true, false, true, false,
+true, false, false, true ,
+true, true, true, true ,
+false, false, true, true]
 
 The correct answer would be 17.
 
 ```javascript
 function countSheeps(arrayOfSheep) {
   let presentSheep = 0;
-  for (let counter = 0; counter < arrayOfSheep.length; counter++){
-    if(arrayOfSheep[counter] == true){
-    // if (arrayOfSheep[counter] != false && arrayOfSheep[counter] != null && arrayOfSheep[counter] != undefined){
+  for (let counter = 0; counter < arrayOfSheep.length; counter++) {
+    if (arrayOfSheep[counter] == true) {
+      // if (arrayOfSheep[counter] != false && arrayOfSheep[counter] != null && arrayOfSheep[counter] != undefined){
       // presentSheep += arrayOfSheep[counter];
       // console.log(arrayOfSheep[counter])
       // console.log(presentSheep)
@@ -1435,9 +1416,9 @@ function countSheeps(arrayOfSheep) {
 ### Convert a String to a Number
 
 ```javascript
-const stringToNumber = function(str){
-  return str= str - "";
-}
+const stringToNumber = function (str) {
+  return (str = str - "");
+};
 // return Number(str);
 // return +str;
 ```
@@ -1450,15 +1431,14 @@ Sam Harris => S.H
 patrick feeney => P.F
 
 ```javascript
-function abbrevName(name){
-
+function abbrevName(name) {
   let Firstletter = name[0];
-  let Lastname = name.split(' ');
-  
-  return (Firstletter +'.'+Lastname[1][0]).toUpperCase();
+  let Lastname = name.split(" ");
 
+  return (Firstletter + "." + Lastname[1][0]).toUpperCase();
 }
 ```
+
 ### Doubled values
 
 Given an array of integers, return a new array with each value doubled.
@@ -1466,11 +1446,11 @@ For example:
 [1, 2, 3] --> [2, 4, 6]
 
 ```javascript
-function maps(x){
+function maps(x) {
   let result = [];
-  for (let counter = 0; counter < x.length; counter++){
-    let calcu = x[counter] * 2
-    result.push(calcu)
+  for (let counter = 0; counter < x.length; counter++) {
+    let calcu = x[counter] * 2;
+    result.push(calcu);
   }
   return result;
 }
@@ -1481,14 +1461,90 @@ function maps(x){
 
 Write a function findNeedle() that takes an array full of junk but containing one "needle"
 After your function finds the needle it should return a message (as a string) that says:
-"found the needle at position " plus the index it found the needle, so: 
+"found the needle at position " plus the index it found the needle, so:
 
 ```javascript
 function findNeedle(haystack) {
   for (let counter = 0; counter < haystack.length; counter++) {
-    if (haystack[counter] == 'needle') {
-      return 'found the needle at position '+ counter
+    if (haystack[counter] == "needle") {
+      return "found the needle at position " + counter;
     }
+  }
+}
+```
+
+### Is he gonna survive?
+
+```javascript
+function hero(bullets, dragons) {
+  let result = bullets / 2;
+  if (result >= dragons) {
+    return true;
+  } else {
+    return false;
+  }
+}
+```
+
+### Convert number to reversed array of digits
+
+```javascript
+function digitize(n) {
+  let reversedArray = [];
+  n = n.toString();
+
+  for (let counter = n.length - 1; counter >= 0; counter--) {
+    reversedArray.push(Number(n[counter]));
+  }
+
+  return reversedArray;
+}
+```
+
+### I love you, a little , a lot, passionately ... not at all
+
+```javascript
+// function howMuchILoveYou(nbPetals) {
+//   switch (nbPetals) {
+//     case 1:
+//       return "I love you";
+//     case 2:
+//       return "a little";
+//     case 3:
+//       return "a lot";
+//     case 4:
+//       return "passionately";
+//     case 5:
+//       return "madly";
+//     case 0:
+//       return "not at all";
+//     default:
+//       return howMuchILoveYou(nbPetals-6)
+//   }
+// }
+
+function howMuchILoveYou(nbPetals) {
+  let rose = nbPetals % 6;
+
+  switch (rose) {
+    case 1:
+      return "I love you";
+      break;
+    case 2:
+      return "a little";
+      break;
+    case 3:
+      return "a lot";
+      break;
+    case 4:
+      return "passionately";
+      break;
+    case 5:
+      return "madly";
+      break;
+    case 0:
+      return "not at all";
+      break;
   }
 }
 ```
