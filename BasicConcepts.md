@@ -1548,3 +1548,38 @@ function howMuchILoveYou(nbPetals) {
   }
 }
 ```
+
+### plural
+
+Is the number plural or not? such as 5 minutes, 14 apples, or 1 sun.
+
+```javascript
+function plural(n) {
+  if(n == 1) return false;
+  else return true;
+}
+// or return n !== 1;
+```
+
+### What's the real floor?
+
+change from American floor system (1 2 3 4 5 6 ... 12 14 15 ...) to European floor system (0 1 2 3 4 5 6 ...)
+
+```javascript
+function getRealFloor(n) {
+// (n is) american floor [start with 1] => european floor [start with 0]
+// no floor 13 so if american floor 15 = european floor 13
+  if (n >= 14){
+    return n - 2
+  } else if (n <= 0) {
+    return n 
+  } else {
+    return n - 1
+  }
+}
+// or  if(n >= 13) return n - 2
+//  if(n > 0) return n - 1
+//  return n
+
+// or return n > 13 ? n - 2 : n > 0 ? n - 1 : n; 
+```
