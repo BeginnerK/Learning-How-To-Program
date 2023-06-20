@@ -1583,3 +1583,27 @@ function getRealFloor(n) {
 
 // or return n > 13 ? n - 2 : n > 0 ? n - 1 : n; 
 ```
+### Opposites Attract
+
+If one of the flowers == even and the other flowers == odd then that is "true" otherwise return false
+
+```javascript
+function lovefunc(flower1, flower2){  
+  if (flower1 % 2 == 0 && flower2 % 2 == 1){
+    return true
+  } else if(flower2 % 2 == 0 && flower1 % 2 == 1){
+    return true
+  } else {
+    return false
+  }
+}
+// or return flower1 % 2 !== flower2 % 2;
+```
+
+### Convert a Boolean to a String
+
+```javascript
+function booleanToString(b){
+  return b.toString();
+}
+```
