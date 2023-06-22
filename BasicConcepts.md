@@ -1607,3 +1607,41 @@ function booleanToString(b){
   return b.toString();
 }
 ```
+### Get the Middle Character
+
+You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
+```javascript
+function getMiddle(s) {
+  let cal2 = s.length / 2;
+  if (s.length % 2 == 0) {
+    return s[cal2 - 1] + s[cal2];
+  } else if (s.length % 2 == 1) {
+    return s[Math.floor(cal2)];
+  }
+}
+```
+### vowel count
+
+Return the number (count) of vowels in the given string.
+
+We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+The input string will only consist of lower case letters and/or spaces.
+
+```javascript
+function getCount(str) {
+  let result = 0
+ for (let counter = 0; counter < str.length; counter++){
+  switch (str[counter]){
+      case 'a':
+      case 'e':
+      case 'i':
+      case 'o':
+      case 'u':
+      result ++
+  } 
+ }
+  return result
+}
+```
