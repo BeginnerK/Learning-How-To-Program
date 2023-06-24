@@ -1691,3 +1691,33 @@ var isSquare = function(n){
  }
 }
 ```
+
+### Is this a triangle?
+
+Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case.
+
+(In this case, all triangles must have surface greater than 0 to be accepted).
+
+```javascript
+function isTriangle(a,b,c)
+// if a + b < c then it's not triagle 
+{
+  [a,b,c] = [a,b,c].sort((a,b)=>a-b)
+  //a=[a,b,c].sort()[0]
+  //b=[a,b,c].sort()[1]
+  //c=[a,b,c].sort()[2]
+  console.log (a , b , c)
+  if (a + b <= c){
+    return false
+  } else if (a <= 0 ){
+    return false
+  } else if (b <= 0 ){
+    return false
+  } else if (c <= 0 ){
+    return false
+  }
+    else {
+     return true
+  }
+}
+```
