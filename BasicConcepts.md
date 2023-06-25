@@ -1721,3 +1721,30 @@ function isTriangle(a,b,c)
   }
 }
 ```
+
+### Exes and Ohs
+
+Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+```javascript
+function XO(str) {
+   str = str.toLowerCase()
+   let x = 0;
+   let o = 0;
+  
+  for (let counter = 0; counter < str.length; counter++) {
+   if (str[counter] == 'x'){
+     x++
+   }
+   if (str[counter] == 'o'){
+     o++
+    }
+  }
+  
+  if (x == o){
+     return true
+   } else {
+     return false
+   }
+}
+```
