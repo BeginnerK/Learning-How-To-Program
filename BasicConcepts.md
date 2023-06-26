@@ -1751,3 +1751,22 @@ function XO(str) {
   }
 }
 ```
+
+
+### Shortest Word
+
+```javascript
+function findShort(s) {
+  s = s.split(" ");
+  let firstword = s[0].length;
+  for (let counter = 0; counter < s.length; counter++) {
+    let currentwordlen = s[counter].length;
+    if (currentwordlen < firstword) {
+      firstword = currentwordlen;
+    }
+  }
+  return firstword;
+  // or  return Math.min(...s.split(" ").map((s) => s.length));
+}
+```
+
