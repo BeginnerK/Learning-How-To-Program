@@ -483,16 +483,18 @@ Modulo
 
 #### method SyntaxAddition (+)
 
-    - Subtraction (-)
-    - Multiplication (\*)
-    - Division (/)
-    - Modulo (Remainder) (%)
+- Subtraction (-)
+- Multiplication (\*)
+- Division (/)
+- Modulo (Remainder) (%)
+
+```ruby
 
 # lambda
 
 (a) -> a\*\*2
 
-````
+```
 
 #### Examples of methods
 
@@ -506,7 +508,7 @@ function celsius(a) {
 
 celsius(77);
 celsius(88);
-````
+```
 
 ```java
 Public Class Methods {
@@ -1555,7 +1557,7 @@ Is the number plural or not? such as 5 minutes, 14 apples, or 1 sun.
 
 ```javascript
 function plural(n) {
-  if(n == 1) return false;
+  if (n == 1) return false;
   else return true;
 }
 // or return n !== 1;
@@ -1567,34 +1569,35 @@ change from American floor system (1 2 3 4 5 6 ... 12 14 15 ...) to European flo
 
 ```javascript
 function getRealFloor(n) {
-// (n is) american floor [start with 1] => european floor [start with 0]
-// no floor 13 so if american floor 15 = european floor 13
-  if (n >= 14){
-    return n - 2
+  // (n is) american floor [start with 1] => european floor [start with 0]
+  // no floor 13 so if american floor 15 = european floor 13
+  if (n >= 14) {
+    return n - 2;
   } else if (n <= 0) {
-    return n 
+    return n;
   } else {
-    return n - 1
+    return n - 1;
   }
 }
 // or  if(n >= 13) return n - 2
 //  if(n > 0) return n - 1
 //  return n
 
-// or return n > 13 ? n - 2 : n > 0 ? n - 1 : n; 
+// or return n > 13 ? n - 2 : n > 0 ? n - 1 : n;
 ```
+
 ### Opposites Attract
 
 If one of the flowers == even and the other flowers == odd then that is "true" otherwise return false
 
 ```javascript
-function lovefunc(flower1, flower2){  
-  if (flower1 % 2 == 0 && flower2 % 2 == 1){
-    return true
-  } else if(flower2 % 2 == 0 && flower1 % 2 == 1){
-    return true
+function lovefunc(flower1, flower2) {
+  if (flower1 % 2 == 0 && flower2 % 2 == 1) {
+    return true;
+  } else if (flower2 % 2 == 0 && flower1 % 2 == 1) {
+    return true;
   } else {
-    return false
+    return false;
   }
 }
 // or return flower1 % 2 !== flower2 % 2;
@@ -1603,10 +1606,11 @@ function lovefunc(flower1, flower2){
 ### Convert a Boolean to a String
 
 ```javascript
-function booleanToString(b){
+function booleanToString(b) {
   return b.toString();
 }
 ```
+
 ### Get the Middle Character
 
 You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
@@ -1621,6 +1625,7 @@ function getMiddle(s) {
   }
 }
 ```
+
 ### vowel count
 
 Return the number (count) of vowels in the given string.
@@ -1631,50 +1636,50 @@ The input string will only consist of lower case letters and/or spaces.
 
 ```javascript
 function getCount(str) {
-  let result = 0
- for (let counter = 0; counter < str.length; counter++){
-  switch (str[counter]){
-      case 'a':
-      case 'e':
-      case 'i':
-      case 'o':
-      case 'u':
-      result ++
-  } 
- }
-  return result
+  let result = 0;
+  for (let counter = 0; counter < str.length; counter++) {
+    switch (str[counter]) {
+      case "a":
+      case "e":
+      case "i":
+      case "o":
+      case "u":
+        result++;
+    }
+  }
+  return result;
 }
 ```
+
 ### Drink about
 
-    Kids drink toddy.
-    Teens drink coke.
-    Young adults drink beer.
-    Adults drink whisky.
+Kids drink toddy.
+Teens drink coke.
+Young adults drink beer.
+Adults drink whisky.
 
 Make a function that receive age, and return what they drink.
 
 Rules:
 
-    Children under 14 old.
-    Teens under 18 old.
-    Young under 21 old.
-    Adults have 21 or more.
+- Children under 14 old.
+- Teens under 18 old.
+- Young under 21 old.
+- Adults have 21 or more.
 
 ```javascript
 function peopleWithAgeDrink(old) {
-  switch(true){
-    case old < 14: 
+  switch (true) {
+    case old < 14:
       return "drink toddy";
     case old < 18:
       return "drink coke";
     case old < 21:
       return "drink beer";
-    case old >= 21: 
+    case old >= 21:
       return "drink whisky";
-    
   }
-};
+}
 ```
 
 ### Squre numbers
@@ -1682,14 +1687,14 @@ function peopleWithAgeDrink(old) {
 Given an integral number, determine if it's a square number
 
 ```javascript
-var isSquare = function(n){
- let root = Math.ceil(n ** (1/2))
- if (root * root == n){
-   return true
- } else {
-   return false
- }
-}
+var isSquare = function (n) {
+  let root = Math.ceil(n ** (1 / 2));
+  if (root * root == n) {
+    return true;
+  } else {
+    return false;
+  }
+};
 ```
 
 ### Is this a triangle?
@@ -1699,25 +1704,23 @@ Implement a function that accepts 3 integer values a, b, c. The function should 
 (In this case, all triangles must have surface greater than 0 to be accepted).
 
 ```javascript
-function isTriangle(a,b,c)
-// if a + b < c then it's not triagle 
-{
-  [a,b,c] = [a,b,c].sort((a,b)=>a-b)
+function isTriangle(a, b, c) {
+  // if a + b < c then it's not triagle
+  [a, b, c] = [a, b, c].sort((a, b) => a - b);
   //a=[a,b,c].sort()[0]
   //b=[a,b,c].sort()[1]
   //c=[a,b,c].sort()[2]
-  console.log (a , b , c)
-  if (a + b <= c){
-    return false
-  } else if (a <= 0 ){
-    return false
-  } else if (b <= 0 ){
-    return false
-  } else if (c <= 0 ){
-    return false
-  }
-    else {
-     return true
+  console.log(a, b, c);
+  if (a + b <= c) {
+    return false;
+  } else if (a <= 0) {
+    return false;
+  } else if (b <= 0) {
+    return false;
+  } else if (c <= 0) {
+    return false;
+  } else {
+    return true;
   }
 }
 ```
@@ -1728,23 +1731,23 @@ Check to see if a string has the same amount of 'x's and 'o's. The method must r
 
 ```javascript
 function XO(str) {
-   str = str.toLowerCase()
-   let x = 0;
-   let o = 0;
-  
+  str = str.toLowerCase();
+  let x = 0;
+  let o = 0;
+
   for (let counter = 0; counter < str.length; counter++) {
-   if (str[counter] == 'x'){
-     x++
-   }
-   if (str[counter] == 'o'){
-     o++
+    if (str[counter] == "x") {
+      x++;
+    }
+    if (str[counter] == "o") {
+      o++;
     }
   }
-  
-  if (x == o){
-     return true
-   } else {
-     return false
-   }
+
+  if (x == o) {
+    return true;
+  } else {
+    return false;
+  }
 }
 ```
