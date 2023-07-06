@@ -1751,3 +1751,58 @@ function XO(str) {
   }
 }
 ```
+
+### Shortest Word
+
+```javascript
+function findShort(s) {
+  s = s.split(" ");
+  let firstword = s[0].length;
+  for (let counter = 0; counter < s.length; counter++) {
+    let currentwordlen = s[counter].length;
+    if (currentwordlen < firstword) {
+      firstword = currentwordlen;
+    }
+  }
+  return firstword;
+  // or  return Math.min(...s.split(" ").map((s) => s.length));
+}
+```
+
+### Pythagorean Triple
+
+```javascript
+function isPythagoreanTriple(integers) {
+  let [a, b, c] = integers.sort((a, b) => a - b);
+
+  return a ** 2 + b ** 2 == c ** 2;
+}
+```
+
+### Make the Deadfish Swim (string parser)
+
+```ruby
+# i = + 1
+# d = - 1
+# s = ** 2
+# o = add to the result
+
+def parse(data)
+  output = []
+  result = 0
+  data.each_char { |letter|
+    case letter
+    when "i"
+      result += 1
+    when "d"
+      result -= 1
+    when "s"
+      result **= 2
+    when "o"
+      output.push(result)
+    end
+  }
+
+  return output
+end
+```

@@ -1,0 +1,27 @@
+h2 {
+  font-weight: 400;
+  color: red;
+  display: inline;
+}
+
+#black {
+  color: gray;
+}
+
+.green {
+  color: greenyellow;
+}
+
+div * {
+  display: block;
+  border: dotted black 10px;
+  height: 100px;
+  width: 100px;
+  background-color: aquamarine;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
