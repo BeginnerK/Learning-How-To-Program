@@ -1779,30 +1779,47 @@ function isPythagoreanTriple(integers) {
 }
 ```
 
-### Make the Deadfish Swim (string parser)
+### Square Every Digit
 
-```ruby
-# i = + 1
-# d = - 1
-# s = ** 2
-# o = add to the result
+```javascript
+/*
+ how does map work
+ what tf is a join?
+ do i still understand this code?
+*/
 
-def parse(data)
-  output = []
-  result = 0
-  data.each_char { |letter|
-    case letter
-    when "i"
-      result += 1
-    when "d"
-      result -= 1
-    when "s"
-      result **= 2
-    when "o"
-      output.push(result)
-    end
+function squareDigits(num) {
+  return Number(
+    num
+      .toString()
+      .split("")
+      .map((a) => a ** 2)
+      .join("")
+  );
+}
+```
+
+### Cat years, Dog years
+
+```javascript
+var humanYearsCatYearsDogYears = function (humanYears) {
+  let catYears = 0;
+  let dogYears = 0;
+
+  if (humanYears == 1) {
+    catYears = 15;
+    dogYears = 15;
+  } else if (humanYears == 2) {
+    catYears = 15 + 9;
+    dogYears = 15 + 9;
+  } else if (humanYears == 3) {
+    catYears = 15 + 9 + 4;
+    dogYears = 15 + 9 + 5;
+  } else {
+    catYears = 28 + (humanYears - 3) * 4;
+    dogYears = 29 + (humanYears - 3) * 5;
   }
 
-  return output
-end
+  return [humanYears, catYears, dogYears];
+};
 ```
