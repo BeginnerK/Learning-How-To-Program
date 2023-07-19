@@ -1823,3 +1823,39 @@ var humanYearsCatYearsDogYears = function (humanYears) {
   return [humanYears, catYears, dogYears];
 };
 ```
+
+### Isograms
+
+```javascript
+function isIsogram(str) {
+  str = str.toLowerCase();
+  for (let posX = 0; posX < str.length; posX++) {
+    for (let posY = 0; posY < str.length; posY++) {
+      if (posY != posX) {
+        if (str[posY] == str[posX]) {
+          return false;
+        }
+      }
+    }
+  }
+  return true;
+}
+```
+
+### Beginner Series #2 Clock
+
+```ruby
+def past(h, m, s)
+  # 1 h = 60 m
+  # 60 m = 3,600 s = 3,600,000 ms
+  # 1 m = 60 s = 60,000 ms
+  # 1 s = 1,000 ms
+  # from 0,0,0 how many ms have passed?
+
+  h *= 3600000
+  m *= 60000
+  s *= 1000
+
+  h+m+s
+end
+```
